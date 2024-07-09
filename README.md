@@ -21,7 +21,8 @@ themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
 
 <div align="center">
   
-<img src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/9bb8fa17-7a42-41d8-94e0-8b91cf13befa" height ="550">
+<img src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/96d5713c-7219-47e9-bd22-1ffe964031df" height ="550">
+<img src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/1df742cc-c10b-4f6f-8305-91dc8ae31132" height ="550">
 
 </div>
 
