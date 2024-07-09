@@ -4,9 +4,14 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -14,10 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      themeMode: isDark? ThemeMode.dark:ThemeMode.light,
+      themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
         body: SizedBox(
           height: height,
           width: width,
@@ -28,17 +32,42 @@ class MyApp extends StatelessWidget {
               ),
               const Text(
                 'Yo Man!',
-                style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold,letterSpacing: 1),
+                style: TextStyle(
+                    fontSize: 42,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1),
               ),
-              SizedBox(height: height*0.015,),
+              SizedBox(
+                height: height * 0.013,
+              ),
               const Text(
                 'it`s a simple example of\n          dark theme',
                 style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 24,
                     fontWeight: FontWeight.w500,
                     letterSpacing: 1,
                     color: Colors.grey),
-              )
+              ),
+              SizedBox(
+                height: height * 0.08,
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    isDark = false;
+                  });
+                },
+                child:
+                    lightDarkButton(height, width, 'Light Mode', Colors.amber),
+              ),
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    isDark = true;
+                  });
+                },
+                child: lightDarkButton(height, width, 'Dark Mode', Colors.red),
+              ),
             ],
           ),
         ),
@@ -46,5 +75,20 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+Container lightDarkButton(double height, double width, text, color) {
+  return Container(
+    margin: const EdgeInsets.fromLTRB(25, 25, 25, 5),
+    alignment: Alignment.center,
+    height: height * 0.1,
+    width: width,
+    decoration: BoxDecoration(
+      color: color,
+      borderRadius: BorderRadius.circular(10),
+    ),
+    child: Text(
+      text,
+      style: const TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+    ),
+  );
+}
 bool isDark = false;
