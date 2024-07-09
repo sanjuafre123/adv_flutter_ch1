@@ -15,3 +15,13 @@ theme: ThemeData.light(),
 darkTheme: ThemeData.dark(),
 themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
 ```
+<br><br>
+
+# 1.2 Create Registration Page using Stepper Widget
+
+<div align="center">
+  
+<img src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/9bb8fa17-7a42-41d8-94e0-8b91cf13befa" height ="550">
+
+</div>
+
