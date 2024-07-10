@@ -27,9 +27,9 @@ themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
 
 </div>
 
- # 1. Information of Provider With State Management 
+ <h1 align="center">  1. Information of Provider With State Management </h1>
 
-# State Management :
+# ⚫ State Management :
 
 - ```State management in Flutter is crucial for building responsive and dynamic applications.```
 
@@ -41,7 +41,7 @@ themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
 
 - ```Rebuild the our stateful or stateless widget build method.```
 
-# Provider State Management :
+# ⚫ Provider State Management :
 
 - ```Provider is a powerful state management solution in Flutter, offering a simple way to manage and share state across your application.```
 
