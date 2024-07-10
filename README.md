@@ -27,3 +27,56 @@ themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
 
 </div>
 
+ # 1. Information of Provider With State Management 
+
+# State Management :
+
+- ```State management in Flutter is crucial for building responsive and dynamic applications.```
+
+## ⚫ State :
+
+- ```A state is information that can be read when the widget is built and might change or modified over a lifetime of the app.```
+
+## ⚫ SetState :
+
+- ```Rebuild the our stateful or stateless widget build method.```
+
+# Provider State Management :
+
+- ```Provider is a powerful state management solution in Flutter, offering a simple way to manage and share state across your application.```
+
+## ⚫ Provider package :
+
+```
+dependencies:
+
+  flutter:
+    sdk: flutter
+  provider: ^6.0.0  # Check for the latest version
+
+```
+
+# ⚫ ChangeNotifier Class :
+
+- ```ChangeNotifier is a simple class, which provides change notification to its listeners.```
+  
+- It is easy to understand, implement, and optimized for a small number of listeners.
+- It is used for the listener to observe a model for changes.
+- In this, we only use the notifyListener() method to inform the listeners.
+
+## ⚫ ChangeNotifierProvider Widget :
+
+- ```ChangeNotifierProvider is the widget that provides an instance of a ChangeNotifier to its descendants. It comes from the provider package.```
+- The following code snippets help to understand the concept of ChangeNotifierProvider.
+
+## ⚫ Consumer Widget :
+
+- ```It is a type of provider that does not do any fancy work.```
+- It just calls the provider in a new widget and delegates its build implementation to the builder.
+
+
+## ⚫ Provider Tree :
+
+<div align="center">
+  <img height="550"  src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/5dd9c104-239c-49ae-9af2-7b0753d3dbeb" />
+</div>
