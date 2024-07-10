@@ -78,5 +78,17 @@ dependencies:
 ## ⚫ Provider Tree :
 
 <div align="center">
-  <img height="550"  src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/5dd9c104-239c-49ae-9af2-7b0753d3dbeb" />
+  <img height="550"  src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/5dd9c104-239c-49ae-9af2-7b0753d3dbeb">
 </div>
+
+ <h1 align="center">  1.4 Provider & Change Theme using Provider </h1>
+
+<div align="center">
+  <img src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/ffa27e41-bcc0-4eb9-88e8-508995b3519c" height ="550">
+  <img src="https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/c5e849a4-5291-42fc-b043-547ff58aef87" height ="550">
+
+https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/d22169ce-9da4-412a-aad9-c51e780eb2ce
+
+</div>
+
+
