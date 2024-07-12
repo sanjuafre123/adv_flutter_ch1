@@ -4,6 +4,8 @@ import 'Screen/Lec-1 .5/Provider/homeProvider.dart';
 import 'Screen/Lec-1 .5/view/HomePage.dart';
 import 'Screen/Lec-1.4/provide/theme_change_provider.dart';
 import 'Screen/Lec-1.4/view/change_theme.dart';
+import 'Screen/Lec-1.5.2/provider/welcomeProvider.dart';
+import 'Screen/Lec-1.5.2/view/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +17,25 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => QuoteProvider(),
-      builder: (context, child) => MaterialApp(
+      create: (context) => IntroProvider(),
+      builder: (context, child) => const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Homepage(),
+        home: WelcomeScreen(),
       ),
     );
+
+
+
+    // return ChangeNotifierProvider(
+    //   create: (context) => QuoteProvider(),
+    //   builder: (context, child) => const MaterialApp(
+    //     debugShowCheckedModeBanner: false,
+    //     home: Homepage(),
+    //   ),
+    // );
+
+
+
     // return ChangeNotifierProvider(
     //   create: (context) => ThemeChangeProvider(),
     //   builder: (context, child) => MaterialApp(
