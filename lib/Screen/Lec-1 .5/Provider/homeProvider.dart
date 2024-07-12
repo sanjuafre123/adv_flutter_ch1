@@ -22,7 +22,7 @@ class QuoteProvider extends ChangeNotifier{
 
   void removeQuote(int index)
   {
-    quoteModelText.quoteModelList.removeAt(index);
+    quotesList.removeAt(index);
     notifyListeners();
   }
 
