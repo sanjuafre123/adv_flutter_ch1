@@ -1,29 +1,51 @@
+import 'package:add_flutter/Screen/Lec-1.5.2/view/welcome2.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({super.key});
+import '../../../Utils/globle.dart';
+import '../component/component.dart';
 
+class IntroScreen extends StatelessWidget {
+  const IntroScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
         body: SizedBox(
           width: double.infinity,
-          child: Column(
-            children: [
-              SizedBox(
-                height: height*0.15,
-              ),
-              SizedBox(
-                height: height*0.45,
-                width: width*0.75,
-                child: Image.asset('assets/1.jpeg',fit: BoxFit.cover,),
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: Column(
+              children: [
+                introScreen(
+                  height,
+                  width,
+                  data[index]['img'],
+                  data[index]['text1'],
+                  data[index]['text2'],
+                  data[index]['text3'],
+                  data[index]['text4'],
+                  context,
+                      () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const IntroScreen2(),
+                      ),
+                    );
+                  },
+                  Colors.amber,
+                  Colors.grey,
+                  Colors.grey,
+                  Colors.grey,
+                  'Next',
+                ),
+              ],
+            ),
           ),
         ),
       ),
