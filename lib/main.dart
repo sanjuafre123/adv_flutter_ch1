@@ -1,37 +1,65 @@
-import 'package:adv_flutter_ch1/Screen/Lec-1.4/provide/theme_change_provider.dart';
+import 'package:add_flutter/Screen/Lec-1.4/view/change_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'Screen/Lec-1.4/provide/theme_change_provider.dart';
 import 'Screen/Lec-1.5.2/provider/welcomeProvider.dart';
 import 'Screen/Lec-1.5.2/view/welcome.dart';
 
+bool theme = false;
+bool isHomed = false;
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
 
-  runApp(MultiProvider(
-    providers: [
-      ChangeNotifierProvider(
-        create: (context) => IntroProvider(),
-      ),
-      ChangeNotifierProvider(
-        create: (context) => ThemeChangeProvider(),
-      ),
-    ],
-    builder: (context, child) => const MyApp(),
-  ));
+  theme = sharedPreferences.getBool('theme') ?? false;
+  isHomed = sharedPreferences.getBool('home') ?? false;
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ChangeThemeScreenProvider(theme),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => IntroScreenProvider(isHomed),
+        ),
+      ],
+      builder: (context, child) => const MyApp(),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    ChangeThemeScreenProvider changeThemeScreenProviderTrue =
+    Provider.of<ChangeThemeScreenProvider>(context, listen: true);
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: IntroScreen(),
+      home: Provider.of<IntroScreenProvider>(context).isHome ? const ChangeTheme() : const IntroScreen(),
+      theme: changeThemeDataToLight,
+      darkTheme: changeThemeDataToDark,
+      themeMode: changeThemeScreenProviderTrue.isDark
+          ? ThemeMode.dark
+          : ThemeMode.light,
     );
+
+    // return ChangeNotifierProvider(
+    //   create: (context) => IntroProvider(),
+    //   builder: (context, child) => const MaterialApp(
+    //     debugShowCheckedModeBanner: false,
+    //     home: IntroScreen(),
+    //   ),
+    // );
 
     // return ChangeNotifierProvider(
     //   create: (context) => QuoteProvider(),
@@ -44,27 +72,6 @@ class MyApp extends StatelessWidget {
     // return ChangeNotifierProvider(
     //   create: (context) => ThemeChangeProvider(),
     //   builder: (context, child) => MaterialApp(
-    //     theme: ThemeData(
-    //       brightness: Brightness.light,
-    //       colorScheme: const ColorScheme.light(
-    //         surface: Color(0xff9730a4),
-    //         onInverseSurface: Color(0xff5ea669),
-    //         onTertiary: Color(0xff3a91d6),
-    //         onTertiaryContainer: Color(0xffc56763),
-    //       ),
-    //     ),
-    //     darkTheme: ThemeData(
-    //       brightness: Brightness.dark,
-    //       colorScheme: const ColorScheme.dark(
-    //         surface: Color(0xffc57b24),
-    //         onInverseSurface: Color(0xff4478ac),
-    //         onTertiary: Color(0xffd1275e),
-    //         onTertiaryContainer: Color(0xffe2de7f),
-    //       ),
-    //     ),
-    //     themeMode: Provider.of<ThemeChangeProvider>(context).isDark
-    //         ? ThemeMode.dark
-    //         : ThemeMode.light,
     //     debugShowCheckedModeBanner: false,
     //     home: const ChangeTheme(),
     //   ),
