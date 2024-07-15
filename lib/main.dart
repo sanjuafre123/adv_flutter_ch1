@@ -1,11 +1,26 @@
+import 'package:adv_flutter_ch1/Screen/Lec-1.4/provide/theme_change_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'Screen/Lec-1.5.2/provider/welcomeProvider.dart';
 import 'Screen/Lec-1.5.2/view/welcome.dart';
 
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-void main() {
-  runApp(const MyApp());
+  SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (context) => IntroProvider(),
+      ),
+      ChangeNotifierProvider(
+        create: (context) => ThemeChangeProvider(),
+      ),
+    ],
+    builder: (context, child) => const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,12 +28,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => IntroProvider(),
-      builder: (context, child) => const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: IntroScreen(),
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: IntroScreen(),
     );
 
     // return ChangeNotifierProvider(
