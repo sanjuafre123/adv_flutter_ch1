@@ -8,7 +8,7 @@ TextEditingController txtQuote = TextEditingController();
 TextEditingController txtAuthor = TextEditingController();
 
 int selectIndex = 0;
-
+int index =0;
 bool isGrid = false;
 
 List quotesList = [
