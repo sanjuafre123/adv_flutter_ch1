@@ -103,3 +103,19 @@ https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/f7784e85-ec83-4
 </div>
 
 
+
+</div>
+
+
+ <h1 align="center">  1.4 Provider & Change Theme using Provider </h1>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f85e2df7-8299-46fc-80c3-849cc5e6d44d" height ="550">
+  <img src="https://github.com/user-attachments/assets/a82f0a1a-8ff7-4e91-a638-c50ffc464f75" height ="550">
+  <img src="https://github.com/user-attachments/assets/74ac8389-2842-4dd3-8195-20f1e8afd9af" height ="550">
+  <img src="https://github.com/user-attachments/assets/9e640a12-0750-49c5-bcc0-83c2e61f5e10" height ="550">
+
+
+</div>
+
+
