@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class IntroProvider extends ChangeNotifier{
-  bool isWelcome = false;
+class IntroScreenProvider extends ChangeNotifier {
+  bool isHome = false;
   late SharedPreferences sharedPreferences;
 
   void checkIsHome() {
-    isWelcome = true;
-    setPreferences(isWelcome);
+    isHome = true;
+    setPreferencesIsHome(isHome);
     notifyListeners();
   }
 
-  Future<void> setPreferences(bool value) async {
-    sharedPreferences  = await SharedPreferences.getInstance();
+  Future<void> setPreferencesIsHome(bool value) async {
+    sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool('home', value);
   }
 
-  introScreenProvider(bool isWelcome){
-    isWelcome = isWelcome;
+  IntroScreenProvider(bool isHomed){
+    isHome = isHomed;
     notifyListeners();
   }
 }

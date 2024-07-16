@@ -12,7 +12,7 @@ class IntroScreen4 extends StatelessWidget {
   Widget build(BuildContext context) {
 
     var introScreenProviderFalse =
-    Provider.of<IntroProvider>(context, listen: false);
+    Provider.of<IntroScreenProvider>(context, listen: false);
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
 

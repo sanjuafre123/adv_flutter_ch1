@@ -1,4 +1,4 @@
-import 'package:add_flutter/Screen/Lec-1.5.2/view/welcome2.dart';
+import 'package:adv_flutter_ch1/Screen/Lec-1.5.2/view/welcome2.dart';
 import 'package:flutter/material.dart';
 
 import '../../../Utils/globle.dart';
