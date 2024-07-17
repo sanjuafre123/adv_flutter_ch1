@@ -1,8 +1,10 @@
-import 'package:adv_flutter_ch1/Screen/Lec-1%20.5/Provider/homeProvider.dart';
-import 'package:adv_flutter_ch1/Screen/Lec-1%20.5/model/homeModel.dart';
+
 import 'package:adv_flutter_ch1/Utils/globle.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../Provider/homeProvider.dart';
+import '../model/homeModel.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({super.key});

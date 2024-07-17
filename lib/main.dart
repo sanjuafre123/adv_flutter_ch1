@@ -6,6 +6,8 @@ import 'Screen/Lec-1.5.2/provider/welcomeProvider.dart';
 import 'Screen/Lec-1.5.2/view/welcome.dart';
 import 'Screen/Lec-1.6/Provider/Url_provider.dart';
 import 'Screen/Lec-1.6/view/url_Launcher_screen.dart';
+import 'Screen/Lec-1.7/provider/gallery_provider.dart';
+import 'Screen/Lec-1.7/view/gallery1.dart';
 
 bool theme = false;
 bool isHomed = false;
@@ -29,6 +31,9 @@ Future<void> main() async {
         ChangeNotifierProvider(
           create: (context) => LauncherProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (context) => GalleryProvider(),
+        ),
       ],
       builder: (context, child) => const MyApp(),
     ),
@@ -49,7 +54,8 @@ class _MyAppState extends State<MyApp> {
         Provider.of<ChangeThemeScreenProvider>(context, listen: true);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const UrlLauncherScreen(),
+      home: const Gallery1Screen(),
+      // home: const UrlLauncherScreen(),
 //       home: Provider.of<IntroScreenProvider>(context).isHome ? const ChangeTheme() : const IntroScreen(),
       theme: changeThemeDataToLight,
       darkTheme: changeThemeDataToDark,
