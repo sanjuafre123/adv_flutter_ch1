@@ -131,4 +131,16 @@ https://github.com/user-attachments/assets/ef3e99d6-8c70-4599-b99e-1a6c5ccf9c74
 
 </div>
 
+</div>
+
+ <h1 align="center">  1.6 Contact Us Page With Interaction </h1>
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/58e1a7b0-5544-4ad3-b202-812e23d188da" height ="550">
+   <img src="https://github.com/user-attachments/assets/c31d4077-e682-432a-b8e1-d3bc39088fec" height ="550">
+
+https://github.com/user-attachments/assets/6e8b4a6c-9dcc-465d-8bb7-98af1dd74405
+
+</div>
+
 
