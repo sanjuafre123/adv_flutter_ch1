@@ -97,6 +97,10 @@ https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/d22169ce-9da4-4
 
 </div>
 
+## Description
+
+Explore our latest Flutter project featuring dynamic light and dark themes using the Provider package! This setup allows users to switch seamlessly between themes, enhancing accessibility and user preference. Provider ensures efficient state management, making theme changes smooth and responsive. Perfect for modern apps prioritizing user experience and customization.
+
 
  <h1 align="center">  1.5.1 Quotes Data Solving with Provider </h1>
 
