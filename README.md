@@ -1,5 +1,4 @@
 
-https://github.com/user-attachments/assets/e9593f45-0166-4942-bb68-ad44e019ba53
 # 1.1 Switch Dark Theme to Light Theme
 
 <div align="center">
