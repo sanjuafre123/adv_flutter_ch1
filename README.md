@@ -138,10 +138,16 @@ https://github.com/user-attachments/assets/1b364c13-3acc-446a-89b3-5e50f0f907c2
 https://github.com/user-attachments/assets/ef3e99d6-8c70-4599-b99e-1a6c5ccf9c74
 
 </div>
+# url_launcher Package :
+### In Flutter, url_launcher is a package that allows your app to open URLs in a browser or other apps.
+- Open Web Links: It can open web pages in the default browser.
+- Make Phone Calls: It can dial a phone number using the phone app.
+- Send Emails: It can open the email app with a pre-filled email.
+- Send SMS: It can open the messaging app to send a text message.
 
 </div>
 
- <h1 align="center">  1.6 Contact Us Page With Interaction </h1>
+ <h1 align="center">  1.7 What is JSON & JSON Parsing ? </h1>
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/58e1a7b0-5544-4ad3-b202-812e23d188da" height ="550">
