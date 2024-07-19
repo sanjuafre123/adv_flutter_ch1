@@ -141,8 +141,8 @@ A one-time intro screen implemented with SharedPreferences in Flutter ensures th
 https://github.com/user-attachments/assets/ef3e99d6-8c70-4599-b99e-1a6c5ccf9c74
 
 </div>
-# url_launcher Package :
-### 
+- url_launcher Package :
+ 
 In Flutter, url_launcher is a package that allows your app to open URLs in a browser or other apps.
 - Open Web Links: It can open web pages in the default browser.
 - Make Phone Calls: It can dial a phone number using the phone app.
