@@ -150,7 +150,6 @@ In Flutter, url_launcher is a package that allows your app to open URLs in a bro
 - Send SMS: It can open the messaging app to send a text message.
 
 </div>
-
  <h1 align="center">  1.7 Photo Gallery With Biometric Authentication </h1>
 
 <div align="center">
@@ -160,5 +159,38 @@ In Flutter, url_launcher is a package that allows your app to open URLs in a bro
 https://github.com/user-attachments/assets/6e8b4a6c-9dcc-465d-8bb7-98af1dd74405
 
 </div>
+
+## Example :
+
+ ```bash
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:local_auth/local_auth.dart';
+
+class GalleryProvider extends ChangeNotifier {
+  final localAuth = LocalAuthentication();
+  bool didAuthenticate = false;
+
+  Future<void> authication() async {
+    List<BiometricType> availableBiometrics;
+    try {
+      availableBiometrics = await localAuth.getAvailableBiometrics();
+    } on PlatformException catch (e) {
+      'device not supported';
+    }
+    try {
+      didAuthenticate = await localAuth.authenticate(
+        localizedReason: 'Please authenticate to access secure data',
+      );
+      didAuthenticate = didAuthenticate;
+      notifyListeners();
+    } on PlatformException catch (e) {
+      print(e);
+    }
+  }
+}
+
+ ```
 
 
