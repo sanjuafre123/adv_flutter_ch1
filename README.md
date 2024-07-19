@@ -231,6 +231,39 @@ In Flutter, url_launcher is a package that allows your app to open URLs in a bro
 - Send Emails: It can open the email app with a pre-filled email.
 - Send SMS: It can open the messaging app to send a text message.
 
+  ```bash
+  class LauncherProvider extends ChangeNotifier{
+
+  void phoneLauncher()
+  {
+    Uri uri = Uri.parse('tel: +91 9173074442');
+    launchUrl(uri);
+  }
+  void mailLauncher()
+  {
+    Uri uri = Uri.parse('mailto: sanjuafre08@gmail.com');
+    launchUrl(uri);
+  }
+  void linkLauncher()
+  {
+    Uri uri = Uri.parse('https://www.linkedin.com/in/sanju-afre-a294432a9/');
+    launchUrl(uri,mode: LaunchMode.inAppWebView);
+  }
+  void instLauncher()
+  {
+    Uri uri = Uri.parse('https://github.com/sanjuafre123');
+    launchUrl(uri,mode: LaunchMode.inAppWebView);
+  }
+  void gitLauncher()
+  {
+    Uri uri = Uri.parse('https://github.com/sanjuafre123');
+    launchUrl(uri,mode: LaunchMode.inAppWebView);
+  }
+
+}
+
+  ```
+
 </div>
  <h1 align="center">  1.7 Photo Gallery With Biometric Authentication </h1>
 
