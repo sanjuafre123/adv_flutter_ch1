@@ -32,6 +32,88 @@ themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
 
 Flutter Stepper widget! This widget provides a smooth, guided experience for multi-step forms, allowing users to navigate through each step with ease. Perfect for any app requiring structured data input, the Stepper widget enhances user experience with its intuitive design and seamless functionality.
 
+``` base
+
+Stepper(
+          physics: const BouncingScrollPhysics(),
+          currentStep: selectIndex,
+          onStepCancel: () {
+            setState(() {
+              if (selectIndex > 0) {
+                setState(() {
+                  selectIndex--;
+                });
+              } else {
+                selectIndex = 2;
+              }
+            });
+          },
+          onStepContinue: () {
+            setState(() {
+              if (selectIndex != 2) {
+                setState(() {
+                  selectIndex++;
+                });
+              } else {
+                selectIndex = 0;
+              }
+            });
+          },
+          onStepTapped: (int index) {
+            setState(() {
+              selectIndex = index;
+            });
+          },
+          type: isGrid ? StepperType.horizontal : StepperType.vertical,
+          steps: [
+            Step(
+                state: (selectIndex > 0) ? StepState.complete : StepState.editing,
+                stepStyle: StepStyle(
+                    color: Colors.blue, indexStyle: TextStyle(color: Colors.white)),
+                title: Text(
+                  'Account',
+                  style: TextStyle(fontSize: 15),
+                ),
+                isActive: selectIndex == 0,
+                content: TextField(
+                  cursorColor: Colors.blue.shade700,
+                  controller: txtAcc,
+                  decoration: InputDecoration(
+                      hintText: 'Account ',
+                      hintStyle: TextStyle(color: Colors.grey)),
+                )),
+            Step(
+                state: (selectIndex > 1) ? StepState.complete : StepState.editing,
+                stepStyle: StepStyle(
+                    color: Colors.blue, indexStyle: TextStyle(color: Colors.white)),
+                title: Text('Address', style: TextStyle(fontSize: 15)),
+                isActive: selectIndex == 1,
+                content: TextField(
+                  cursorColor: Colors.blue.shade700,
+                  controller: txtAdd,
+                  decoration: InputDecoration(
+                      hintText: 'Address ',
+                      hintStyle: TextStyle(color: Colors.grey)),
+                )),
+            Step(
+              state: (selectIndex > 2) ? StepState.complete : StepState.editing,
+              stepStyle: StepStyle(
+                  color: Colors.blue, indexStyle: TextStyle(color: Colors.white)),
+              title: Text('Mobile Number', style: TextStyle(fontSize: 15)),
+              isActive: selectIndex == 2,
+              content: TextField(
+                cursorColor: Colors.blue.shade700,
+                controller: txtMob,
+                decoration: InputDecoration(
+                    hintText: 'Mobile Number',
+                    hintStyle: TextStyle(color: Colors.grey)),
+              ),
+            ),
+          ],
+        ),
+
+```
+
 
  <h1 align="center">  1. Information of Provider With State Management </h1>
 
