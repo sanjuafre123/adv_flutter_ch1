@@ -151,7 +151,7 @@ In Flutter, url_launcher is a package that allows your app to open URLs in a bro
 
 </div>
 
- <h1 align="center">  1.7 What is JSON & JSON Parsing ? </h1>
+ <h1 align="center">  1.7 Photo Gallery With Biometric Authentication </h1>
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/58e1a7b0-5544-4ad3-b202-812e23d188da" height ="550">
