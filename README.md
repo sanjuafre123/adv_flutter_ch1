@@ -211,7 +211,8 @@ https://github.com/sanjuafre123/adv_flutter_ch1/assets/148860124/f7784e85-ec83-4
 https://github.com/user-attachments/assets/1b364c13-3acc-446a-89b3-5e50f0f907c2
 
 </div>
-## Description:
+
+##  Description:
 
 A one-time intro screen implemented with SharedPreferences in Flutter ensures that users only see the introductory content the first time they open the app. SharedPreferences is used to store a flag indicating whether the intro has been shown. Upon subsequent app launches, the app checks this flag and bypasses the intro if it has already been viewed, providing a smoother user experience by taking users directly to the main content.
 
